@@ -48,6 +48,9 @@ var Game = {
 			if (Game.player.score() == 'bust') {
 				Game.player.bust();
 			} 
+			if (this.score == 'blackjack') {
+				this.blackjack();
+			}
 		}, // end hit function
 		// if player is bust, depletes player balance
 		bust: function () {
@@ -103,6 +106,9 @@ var Game = {
 			if (this.score == 'bust') {
 				this.bust();
 			}
+			if (this.score == 'blackjack') {
+				this.blackjack();
+			}
 		}, // end hit function
 		// if dealer is bust, depletes dealer balance
 		bust: function () {
@@ -132,31 +138,11 @@ var Game = {
 	newRound: function () {
 		this.discardAll();
 		this.initialDeal();
-		this.dealer.cardOne.removeClass('face-down');
-		if (this.dealer.score() == 'blackjack') {
-			this.dealer.cardTwo.removeClass('face-down');
-			if (this.player.score() == 'blackjack') {
-				console.log("both players have blackjack");
-				this.tieHand();
-			} else {
-				console.log("dealer has blackjack");
-				this.dealer.blackjack();
-			}
-		} else if (this.player.score() == 'blackjack') {
-			console.log("player has blackjack");
-			this.dealer.cardTwo.removeClass('face-down');
-			this.player.blackjack();
-		} else if (this.player.score() == 'bust') {
-			this.player.bust();
-		} else {
-			console.log("neither player has blackjack");
-			$('.info').html('Please choose whether to hit, stand, double, split, or surrender');
-		}
-	}, // end play function
+	}, // end newRound function
 	// initial function run when page loads. Opens and shuffles the deck, and stores cards in the Game.deck array.
 	// Then sets listeners on buttons. 
 	openDeck: function () {
-		for (i=0; i < 52; i++) {
+		for (i=0; i < 416; i++) {
 			var shuffle = Math.floor(Math.random() * unopenedDeck.length);
 			dealtCard = unopenedDeck.splice(shuffle, 1)[0];
 			this.deck.push(dealtCard);
@@ -224,6 +210,26 @@ var Game = {
 			Game.dealer.cards[0].name + " and " + Game.dealer.cards[1].name);
 		console.log("The player has " + 
 			Game.player.cards[0].name + " and " + Game.player.cards[1].name);
+		this.dealer.cardOne.removeClass('face-down');
+		if (this.dealer.score() == 'blackjack') {
+			this.dealer.cardTwo.removeClass('face-down');
+			if (this.player.score() == 'blackjack') {
+				console.log("both players have blackjack");
+				this.tieHand();
+			} else {
+				console.log("dealer has blackjack");
+				this.dealer.blackjack();
+			}
+		} else if (this.player.score() == 'blackjack') {
+			console.log("player has blackjack");
+			this.dealer.cardTwo.removeClass('face-down');
+			this.player.blackjack();
+		} else if (this.player.score() == 'bust') {
+			this.player.bust();
+		} else {
+			console.log("neither player has blackjack");
+			$('.info').html('Please choose whether to hit, stand, double, split, or surrender');
+		}
 	}, // end initialDeal function
 
 	// If game is tied, essentially do nothing.
