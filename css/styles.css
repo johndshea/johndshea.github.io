@@ -132,9 +132,11 @@ div {
 	}
     .dealer-hand {
 		margin-top: 1em;
+		border: 1px solid white;
 	}
 	.player-hand {
 		margin-top: 1em;
+		border: 1px solid white;
 	}
 	.discard-pile {
 		margin: 0px 0px 0px 0px;
