@@ -261,9 +261,9 @@ var Game = {
 		} else if (this.dealer.score() == 'blackjack' && this.player.score() == 'blackjack') {
 			this.tieHand();
 		} else if (this.dealer.score() == 'blackjack') {
-			this.dealer.blackJack();
+			this.dealer.blackjack();
 		} else if (this.player.score() == 'blackjack') {
-			this.player.blackJack();
+			this.player.blackjack();
 		} else  if (Game.dealer.score() > Game.player.score()) {
 			console.log("dealer wins!");
 			$('.info').html("dealer wins!");

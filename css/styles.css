@@ -11,10 +11,10 @@ div {
 
 .container {
 	margin: 0 auto;
-	max-width: 1366px;
-	background: url(../images/table.png);
+	max-width: 1024px;
+	background: url(../images/tablecropped.png);
 	background-position: center;
-	height: 768px;
+	height: 620px;
 	text-align: center;
 	position: relative;
 	border: 1px solid black;
@@ -54,12 +54,12 @@ div {
 	min-height: 122px;
 	display:inline-block;
 	padding: 0;
-	margin: 4em auto 0em auto;
+	margin: 0.5em auto 0em auto;
 }
 
 .pot {
 	display:inline-block;
-	margin-top: 8.65em;
+	margin-top: 6em;
 	padding: 0.5em;
 	height:66px;
 	width: 66px;

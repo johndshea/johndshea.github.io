@@ -1,5 +1,7 @@
 ## Introduction
 
+Please note: I moved this project into the github.io folder at the end of construction - to see the full revision history, please see the project repo "blackjack" folder itself.
+
 ## Technologies used:
 * Javascript
 * jQuery
