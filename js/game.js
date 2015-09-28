@@ -17,8 +17,10 @@ var Game = {
 		// returns a string for blackjack or bust, or an interger for any other hand score
 		score: function () {
 			var total = 0;
+			var ace = false;
    			for (var i = 0; i < this.cards.length; i++) {
 				if (this.cards[i].face == 'ace') {
+					ace = true;
 					if (total + 11 <= 21) {
 						total += 11;
 					} else {
@@ -31,7 +33,12 @@ var Game = {
 			if (total == 21) {
 				return 'blackjack';
 			} else if (total > 21) {
-				return 'bust';
+				if ((ace) && (total-10 < 22)) {
+					total -=10;
+					return total;
+				} else {
+					return 'bust';
+				}
 			} else {
 				return total;
 			}
@@ -78,8 +85,10 @@ var Game = {
 		// returns a string for blackjack or bust, or an interger for any other hand score
 		score: function () {
 			var total = 0;
+			var ace = false;
    			for (var i = 0; i < this.cards.length; i++) {
 				if (this.cards[i].face == 'ace') {
+					ace = true;
 					if (total + 11 <= 21) {
 						total += 11;
 					} else {
@@ -92,7 +101,12 @@ var Game = {
 			if (total == 21) {
 				return 'blackjack';
 			} else if (total > 21) {
-				return 'bust';
+				if ((ace) && (total-10 < 22)) {
+					total -=10;
+					return total;
+				} else {
+					return 'bust';
+				}
 			} else {
 				return total;
 			}
@@ -135,13 +149,13 @@ var Game = {
 	// the deck "in play," as opposed to the "unopened deck(s)"
 	deck: [],
 
-	/* main gameplay mechanics function: makes sure all prior-dealt cards are discarded,
-	deals cards, reveals one dealer card, checks for blackjack for both dealer and player,
-	and else waits for user input */
+	/* main gameplay mechanics function: makes sure all prior-dealt cards are discarded, 
+	triggers new dealing, and else waits for user input */
 	newRound: function () {
 		this.discardAll();
 		this.initialDeal();
 	}, // end newRound function
+
 	// initial function run when page loads. Opens and shuffles the deck, and stores cards in the Game.deck array.
 	// Then sets listeners on buttons. 
 	openDeck: function () {
@@ -187,7 +201,8 @@ var Game = {
         });
 	}, // end openDeck function
 
-	// Deals initial two cards to both dealer and player, and creates corresponding DOM elements.
+	// Deals initial two cards to both dealer and player, and creates corresponding DOM elements. 
+	// deals cards, reveals one dealer card, checks for blackjack for both dealer and player,
 	initialDeal: function () {
 		Game.player.cards.push(Game.deck.splice(0,1)[0]);
 		Game.player.cards.push(Game.deck.splice(0,1)[0]);
