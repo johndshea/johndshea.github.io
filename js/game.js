@@ -290,6 +290,7 @@ var Game = {
 		} else  if (Game.dealer.score() == Game.player.score()) {
 			this.tieHand();
 		} else {return 'something went wrong'};
+		}
 	}, // end stand function
 
 	updateBetView: function () {

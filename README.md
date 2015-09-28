@@ -29,8 +29,7 @@ Please note: I moved this project into the github.io folder at the end of constr
 
 ## Outstanding bug list:
 
-1. Every time a player gets blackjack, the game hangs. 
-2. Recognition of Aces as either 1 or 11 is still iffy. For instance, an ace dealt on the dealer side is counted as a 1 properly, but an ace on the player side is counted as an 11. 
+1. The first ace is always counted as 11, regardless of whether it would be more advantageous for the user if that ace was eventually counted as a 1. 
 
 ## Fixed Bug List:
 1. every now and then, I get a really weird error: Uncaught RangeError: Maximum call stack size exceeded(…) game.js:58. This seems to happen whenever I do a recursive function call. SOLUTION: don't use recursion as the default in a switch statment.
