@@ -1,1 +1,46 @@
-Hello World
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Blackjack</title>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class='container'>
+		<div class='info'></div>
+		<!-- <div class='discard-pile'></div>
+		<div class='deck'></div> -->
+		<br>
+		<div class='dealer-hand'>
+
+		</div>
+		<br>
+		<div class='pot'><span id='currentBet'>$5</span></div>
+		<br>
+		<div class='player-hand'></div>
+		<div class='button-div'>
+			<div class='hit button'>hit</div>
+			<div class='stand button'>stand</div>
+			<div class='double button'>double</div>
+			<!-- <div class='split button'>split</div> -->
+			<div class='surrender button'>surrender</div>
+			<div class='new_round button'>new round</div>
+		</div>
+		<div class='left-buttons'>
+			<div class='player-balance button'>player balance: <span id='balance'>$500</span></div>
+			<div class='increase-bet button'>increase bet</div>
+			<div class='decrease-bet button'>decrease bet</div>
+		</div>
+	</div>
+</body>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<script type="text/javascript" src ="js/jquery.min.js"></script>
+<script type="text/javascript" src ="js/bootstrap.min.js"></script>
+<script type="text/javascript" src ="js/decks.js"></script>
+<script type="text/javascript" src ="js/game.js"></script>
+</html>
