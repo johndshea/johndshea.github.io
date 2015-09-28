@@ -245,7 +245,7 @@ var Game = {
 			this.player.bust();
 		} else {
 			console.log("neither player has blackjack");
-			$('.info').html("Please choose whether to hit, stand, double, or surrender (can't split - sorry!");
+			$('.info').html("Please choose whether to hit, stand, double, or surrender - can't split - sorry!");
 		}
 	}, // end initialDeal function
 
