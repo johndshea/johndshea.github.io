@@ -1,8 +1,7 @@
 var Game = {
 
 	player: {
-		//name: prompt("What's your name?"), //uncomment this when done testing
-		name: 'Player One', // comment this when done testing
+		name: 'Player One',
 		balance: 500,
 		currentBet: 5,
 		cards: [],

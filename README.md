@@ -1,5 +1,7 @@
 ## Introduction
 
+Here you have a (hopefully) fully-functional game of blackjack, based on eight decks and a single player. All functionality is included for a single player, except the ability to "split" a pair hand. Have fun! It's got some bugs, but it should be, for the most part, playable. 
+
 Please note: I moved this project into the github.io folder at the end of construction - to see the full revision history, please see the project repo "blackjack" folder itself.
 
 ## Technologies used:
@@ -11,7 +13,11 @@ Please note: I moved this project into the github.io folder at the end of constr
 
 ## the approach taken
 
+I tried to build this game as modularly as possible. The entire game is contained within an object, and each function is, if possible, within the player or dealer who that object affects. All player-linked game states possible are stored within the player object, and the DOM elements are created and removed in the same functions in which their corresponding objects in memory are created or removed. 
+
 ## installation instructions(which may just be a link to your hosted game)
+
+Visit my game at johndshea.github.io
 
 ## wireframe images
 
@@ -22,10 +28,7 @@ Please note: I moved this project into the github.io folder at the end of constr
 ![](workflow/user_story.jpg)
 
 ## To-Do list:
-* uncomment name prompt in Game.player object.
 * add settimeouts so that hitting, etc. isn't instantaneous.
-* switch local jquery and bootstrap links with CDN links
-* add additional decks of cards
 
 ## Outstanding bug list:
 
