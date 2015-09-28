@@ -263,6 +263,7 @@ var Game = {
 		this.dealer.cardTwo.removeClass('face-down');
 		if (this.player.score() == 'bust') {
 			this.player.bust();
+		}
 		while (this.dealer.score() < 17) {
 			this.dealer.hit();
 			console.log("hit dealer");
@@ -290,7 +291,6 @@ var Game = {
 		} else  if (Game.dealer.score() == Game.player.score()) {
 			this.tieHand();
 		} else {return 'something went wrong'};
-		}
 	}, // end stand function
 
 	updateBetView: function () {
