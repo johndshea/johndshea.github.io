@@ -78,18 +78,21 @@ var Game = {
 		// returns a string for blackjack or bust, or an interger for any other hand score
 		score: function () {
 			var total = 0;
-			for (i=0; i<this.cards.length; i++) {
-				total += this.cards[i].value;
-			}
-			if (total > 21) {
-				return 'bust';
-			} else if (this.cards.length == 2) {
-				if (this.cards[0].alternateValue + this.cards[1].value == 21 || 
-					this.cards[1].alternateValue + this.cards[0].value == 21) {
-					return 'blackjack';
+   			for (var i = 0; i < this.cards.length; i++) {
+				if (this.cards[i].face == 'ace') {
+					if (total + 11 <= 21) {
+						total += 11;
+					} else {
+						total += 1;
+					}
 				} else {
-					return total;
-				};				
+					total += this.cards[i].value;
+				}
+			}
+			if (total == 21) {
+				return 'blackjack';
+			} else if (total > 21) {
+				return 'bust';
 			} else {
 				return total;
 			}
@@ -258,6 +261,8 @@ var Game = {
 	stand: function () {
 		console.log("stood");
 		this.dealer.cardTwo.removeClass('face-down');
+		if (this.player.score() == 'bust') {
+			this.player.bust();
 		while (this.dealer.score() < 17) {
 			this.dealer.hit();
 			console.log("hit dealer");
