@@ -59,7 +59,7 @@ div {
 
 .pot {
 	display:inline-block;
-	margin-top: 6em;
+	margin-top: 5.5em;
 	padding: 0.5em;
 	height:66px;
 	width: 66px;
@@ -70,7 +70,7 @@ div {
 }
 
 .player-hand {
-	margin: 2em auto 0em auto;
+	margin: 1em auto 0em auto;
 	min-width: 168px;
 	min-height: 122px;
 	display: inline-block;
@@ -149,7 +149,7 @@ div {
 		width: auto;
 		margin: 0 auto;
 		max-width:100%;
-		top: 60px;
+		top:40px;
 	}
 	.button-div {
 		display: block;
@@ -157,8 +157,8 @@ div {
 		width: auto;
 		margin: 0 auto;
 		max-width:100%;
-		top: 60px;
 		margin-bottom: 1em;
+		top:40px;
 	}
 }
 
