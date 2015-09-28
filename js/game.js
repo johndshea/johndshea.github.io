@@ -19,9 +19,9 @@ var Game = {
 			var ace = false;
    			for (var i = 0; i < this.cards.length; i++) {
 				if (this.cards[i].face == 'ace') {
-					ace = true;
 					if (total + 11 <= 21) {
 						total += 11;
+						ace = true;
 					} else {
 						total += 1;
 					}
@@ -87,9 +87,9 @@ var Game = {
 			var ace = false;
    			for (var i = 0; i < this.cards.length; i++) {
 				if (this.cards[i].face == 'ace') {
-					ace = true;
 					if (total + 11 <= 21) {
 						total += 11;
+						ace = true;
 					} else {
 						total += 1;
 					}
