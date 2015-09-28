@@ -2,7 +2,7 @@
 
 Here you have a (hopefully) fully-functional game of blackjack, based on eight decks and a single player. All functionality is included for a single player, except the ability to "split" a pair hand. Have fun! It's got some bugs, but it should be, for the most part, playable. 
 
-Please note: I moved this project into the github.io folder at the end of construction - to see the full revision history, please see the project repo "blackjack" folder itself.
+Please note: I moved this project into the github.io folder at the end of construction - to see the full revision history, please see my repo "projects/unit_01/blackjack" folder itself.
 
 ## Technologies used:
 * Javascript
@@ -32,7 +32,7 @@ Visit my game at johndshea.github.io
 
 ## Outstanding bug list:
 
-1. The first ace is always counted as 11, regardless of whether it would be more advantageous for the user if that ace was eventually counted as a 1. 
+No remaining major bugs.
 
 ## Fixed Bug List:
 1. every now and then, I get a really weird error: Uncaught RangeError: Maximum call stack size exceeded(…) game.js:58. This seems to happen whenever I do a recursive function call. SOLUTION: don't use recursion as the default in a switch statment.
@@ -40,8 +40,9 @@ Visit my game at johndshea.github.io
 3. The function to empty the player hand and dealer hand isn't removing the first card. SOLUTION: set pop() loop to decrement, not increment.
 4. Intermittently, "hit" dispenses two cards at once. Seems to often be after a bust. SOLUTION: isolate event listeners so they don't get run concurrently more than once. 
 5. Game doesn't correctly recognize Aces as optionally 11 points. SOLUTION: implemented "if" function that treates Aces as 11 if total + 11 <= 21.
+6. The first ace is always counted as 11, regardless of whether it would be more advantageous for the user if that ace was eventually counted as a 1. SOLUTION: added logic that tests for the presence of an ace, and if an ace is present and the score is over 21, subtracts 10 from the score. 
 
-## Wish list:
+## Feature wish list:
 * Build animations
 * make multiple player objects. Perhaps an array of players? Need constructor function.
 * create constructor to generate a deck rather than using a giant object?
