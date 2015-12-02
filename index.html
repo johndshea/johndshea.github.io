@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" /> -->
     <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
     <link rel="stylesheet" href="css/styles.css" media="screen" charset="utf-8">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
@@ -15,6 +15,17 @@
     <title>John Shea</title>
   </head>
   <body>
+
+    <ul id="menu">
+      <!-- <li data-menuanchor="welcome" class="active"><a href="#welcome">Welcome</a></li> -->
+      <!-- <li data-menuanchor="about"><a href="#about">About</a></li> -->
+      <!-- <li data-menuanchor="flaregun"><a href="#flaregun"> Work </a></li> -->
+      <!-- <li data-menuanchor="wiki"><a href="#wiki">Fünke Wiki</a></li> -->
+      <!-- <li data-menuanchor="byg_a"><a href="#byg_a">BYG Advantage</a></li> -->
+      <!-- <li data-menuanchor="black_swan"><a href="#black_swan">Black Swan</a></li> -->
+      <!-- <li data-menuanchor="blackjack"><a href="#blackjack">Blackjack</a></li> -->
+      <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+    </ul>
 
     <div id="pagepiling">
       <div class="section" id="welcome">
@@ -39,27 +50,33 @@
       </div>
 
       <div class="section" id="flaregun">
-        <div class="intro">
+        <div class="overlay">
           <h1>FlareGun</h1>
           <p>
             FlareGun (formerly &#60;sos&#62;) is a location-based help app for programmers.
             Post an SOS request, and a nearby programmer will swoop in on feathery, axe-scented wings to help you in your distress.
             SOS requests can be tagged with "skills" such as jQuery, Ruby, or MySQL, so as to match up a crisis with the right neck-bearded savior.
           </p>
-          <br/>
-          <div id="final_project_demo">
-            <a href="https://funke-wiki.herokuapp.com/">
+        </div>
+
+          <div id="flaregun_demo">
+            <a href="https://sos-app.herokuapp.com/">
               <img src="../img/flaregun.png" alt="FlareGun" width="70%" height="70%" />
             </a>
           </div>
           <img class= "down_arrow" src="../img/down_arrow.svg" alt="scroll down" height="40px" />
-        </div>
+
       </div>
 
       <div class="section" id="wiki">
-        <div class="intro">
+        <div class="overlay">
           <h1>Fünke Wiki</h1>
-          <p>Stuff about my wiki</p>
+          <p>
+            Stuff about my wiki
+          </p>
+        </div>
+          <h1></h1>
+          <p></p>
           <br/>
           <div id="wiki_demo">
             <a href="https://funke-wiki.herokuapp.com/">
@@ -67,7 +84,6 @@
             </a>
           </div>
           <img class= "down_arrow" src="../img/down_arrow.svg" alt="scroll down" height="40px" />
-        </div>
       </div>
 
       <div class="section" id="byg_a">

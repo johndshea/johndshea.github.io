@@ -1,3 +1,4 @@
+// Full-screen scrolling architecture
 $(document).ready(function() {
 	$('#pagepiling').pagepiling({
 		menu: '#menu',
@@ -10,15 +11,6 @@ $(document).ready(function() {
 						  'black_swan',
 							'blackjack',
 							'contact'],
-		// background colors for each section, in order
-    sectionsColor: ['white',
-										'white',
-										'white',
-										'white',
-										'white',
-										'white',
-										'white',
-										'white'],
 		// navigation tooltip names
     navigation: {
     	'position': 'right',
