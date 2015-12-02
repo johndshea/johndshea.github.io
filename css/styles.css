@@ -44,8 +44,9 @@ q:before,q:after {
 abbr,acronym { border: 0;
 }
 
-/* Custom CSS
+ /* Site-wide Styling
  * --------------------------------------- */
+
 body{
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #f2f2f2;
@@ -76,6 +77,21 @@ p{
   display: inline-block;
   position: relative;
   top: 20px;
+}
+
+.section {
+    /* overrides default pagepiling behavior and makes backgrounds static */
+    background-attachment: fixed;
+
+    background-size: auto 80%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
+
+.intro p{
+ width: 50%;
+ margin: 0 auto;
+ font-size: 1.5em;
 }
 
 /* Menu
@@ -123,13 +139,14 @@ p{
 	margin:0;
 }
 
-/* Site-wide Styling
-* --------------------------------------- */
-
-.intro p{
-	width: 50%;
-	margin: 0 auto;
-	font-size: 1.5em;
+#section1 {
+    background-image: url(imgs/h1.jpg);
+}
+#section2 {
+    background-image: url(imgs/h2.jpg);
+}
+#section3 {
+    background-image: url(imgs/h3.jpg);
 }
 
 /* Section 1
