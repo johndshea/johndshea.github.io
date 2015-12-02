@@ -1,500 +1,179 @@
-body {
-	font-family: Helvetica, Arial, sans-serif;
-	margin: 0;
-	padding: 0;
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#f2f2f2;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
 }
 
-div {
-	border-radius: 4px;
-	margin: 10px 10px 10px 10px;
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #f2f2f2;
 }
-
-.container {
-	margin: 0 auto;
-	max-width: 1024px;
-	background: url(../images/tablecropped.png);
-	background-position: center;
-	height: 620px;
-	text-align: center;
-	position: relative;
-	border: 1px solid black;
-
+h1{
+	font-size: 6em;
 }
-
-.discard-pile {
-	width: 84px;
-	height: 122px;
-	background: url(../images/deck_smaller.png) -168px 120px;
-	display:inline-block;
-	margin: 10px 10px 10px 10px;
-	float: left;
-}
-
-.deck {
-	width: 84px;
-	height: 122px;
-	background: url(../images/deck_smaller.png) -168px 120px;
-	display:inline-block;
-	margin: 10px 10px 10px 10px;
-	float: right;
-}
-
-.info {
-	display:inline-block;
-	min-height: 1em;
-	min-width: 340px;
-	padding: 1em;
-	background-color: black;
-	color: white;
-	float:center;
-}
-
-.dealer-hand {
-	min-width: 168px;
-	min-height: 122px;
-	display:inline-block;
-	padding: 0;
-	margin: 0.5em auto 0em auto;
-}
-
-.pot {
-	display:inline-block;
-	margin-top: 5.5em;
-	padding: 0.5em;
-	height:66px;
-	width: 66px;
-	border-radius: 33px;
-	color: white;
+p{
 	font-size: 2em;
+}
+.section{
 	text-align: center;
+  background-color: lightblue;
 }
 
-.player-hand {
-	margin: 1em auto 0em auto;
-	min-width: 168px;
-	min-height: 122px;
-	display: inline-block;
+.work_button {
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: steelblue;
+  position:relative;
+  top: 20px;
+}
+
+.down_arrow {
+  display: inline-block;
+  position: relative;
+  top: 20px;
+}
+
+/* Menu
+ * --------------------------------------- */
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
 	padding: 0;
+	margin:0;
 }
 
-.left-buttons {
-	display: inline-block;
-	padding: 0.3em;
-	float:left;
-	margin: 0;
-	width: 100px;
-	position: relative;
-	top: -300px;
-	background-color: black;
-	color:white;
+/* Site-wide Styling
+* --------------------------------------- */
+
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
 }
 
-.button {
-	min-width: 50px;
-	max-width: 100px;
-	min-height: 10px;
-	display: inline-block;
-	padding: 0.1em;
-	background-color: steelblue;
-	margin: 0.3em;
+/* Section 1
+* --------------------------------------- */
+#welcome h1{
+  color: #444;
+}
+#welcome p{
+  color: #333;
+  color: rgba(0,0,0,0.3);
+}
+#welcome img{
+  margin: 20px 0;
+  opacity: 0.7;
 }
 
-.button-div {
-	display: inline-block;
-	float:right;
-	width: 100px;
-	margin: 0;
-	position: relative;
-	top: -300px;
-	background-color: black;
-	color:white;
+/* Section 2
+* --------------------------------------- */
+#about h1,
+#about p{
+z-index: 3;
+}
+#about p{
+/*opacity: 0.8;*/
+}
+#about img{
+  margin: 20px 0;
 }
 
-.card {
-	width: 84px;
-	height: 122px;
-	margin: 0;
-	display: inline-block;
+/* Section 3
+* --------------------------------------- */
+
+#final_project p{
+color: #757575;
 }
 
-@media screen and (max-width: 518px) {
-    .container {
-        background: green;
-        min-height: 100px;
-    }
-    .info {
-		min-width: 200px;
-		padding: 1em;
-	}
-	.pot{
-		margin-top: 1em;
-		border: 2px solid white;
-	}
-    .dealer-hand {
-		margin-top: 1em;
-		border: 1px solid white;
-	}
-	.player-hand {
-		margin-top: 1em;
-		border: 1px solid white;
-	}
-	.discard-pile {
-		margin: 0px 0px 0px 0px;
-		float: left;
-	}
-	.deck {
-		margin: 0px 0px 0px 0px;
-		float: right;
-	}
-	.left-buttons {
-		display: block;
-		float: none;
-		width: auto;
-		margin: 0 auto;
-		max-width:100%;
-		top:40px;
-	}
-	.button-div {
-		display: block;
-		float: none;
-		width: auto;
-		margin: 0 auto;
-		max-width:100%;
-		margin-bottom: 1em;
-		top:40px;
-	}
+/* Section 4
+* --------------------------------------- */
+#blackjack p{
+opacity: 0.6;
 }
 
-.aceOfSpades {
-	background: url(../images/deck_smaller.png) 0px 243px;
+/* Overwriting fullPage.js tooltip color
+* --------------------------------------- */
+#pp-nav.custom .pp-tooltip{
+  color: #AAA;
 }
-.aceOfDiamonds {
-	background: url(../images/deck_smaller.png) 0px 486px;
-}
-.aceOfClubs {
-	background: url(../images/deck_smaller.png) 0px 0px;
-}
-.aceOfHearts {
-	background: url(../images/deck_smaller.png) 0px 365px;
-}
-.twoOfSpades {
-	background: url(../images/deck_smaller.png) 1006px 243px;
-}		
-.twoOfDiamonds {
-	background: url(../images/deck_smaller.png) 1006px 486px;
-}
-.twoOfClubs  {
-	background: url(../images/deck_smaller.png) 1006px 0px;
-}
-.twoOfHearts {
-	background: url(../images/deck_smaller.png) 1006px 365px;
-}
-.threeOfSpades {
-	background: url(../images/deck_smaller.png) 922px 243px;
-}
-.threeOfDiamonds {
-	background: url(../images/deck_smaller.png) 922px 486px;
-}
-.threeOfClubs {
-	background: url(../images/deck_smaller.png) 922px 0px;
-}
-.threeOfHearts {
-	background: url(../images/deck_smaller.png) 922px 365px;
-}
-
-.fourOfSpades {
-	background: url(../images/deck_smaller.png) 838px 243px;
-}
-.fourOfDiamonds {
-	background: url(../images/deck_smaller.png) 838px 486px;
-}
-.fourOfClubs {
-	background: url(../images/deck_smaller.png) 838px 0px;
-}
-.fourOfHearts {
-	background: url(../images/deck_smaller.png) 838px 365px;
-}
-.fiveOfSpades {
-	background: url(../images/deck_smaller.png) 755px 243px;
-}
-.fiveOfDiamonds {
-	background: url(../images/deck_smaller.png) 755px 486px;
-}
-.fiveOfClubs {
-	background: url(../images/deck_smaller.png) 755px 0px;
-}
-.fiveOfHearts {
-	background: url(../images/deck_smaller.png) 755px 365px;
-}
-.sixOfSpades {
-	background: url(../images/deck_smaller.png) 670px 243px;
-}
-.sixOfDiamonds {
-	background: url(../images/deck_smaller.png) 670px 486px;
-}
-.sixOfClubs {
-	background: url(../images/deck_smaller.png) 670px 0px;
-}
-.sixOfHearts {
-	background: url(../images/deck_smaller.png) 670px 365px;
-}
-.sevenOfSpades {
-	background: url(../images/deck_smaller.png) 587px 243px;
-}
-.sevenOfDiamonds {
-	background: url(../images/deck_smaller.png) 587px 486px;
-}
-.sevenOfClubs {
-	background: url(../images/deck_smaller.png) 587px 0px;
-}
-.sevenOfHearts {
-	background: url(../images/deck_smaller.png) 587px 365px;
-}
-.eightOfSpades {
-	background: url(../images/deck_smaller.png) 503px 243px;
-}
-.eightOfDiamonds {
-	background: url(../images/deck_smaller.png) 503px 486px;
-}
-.eightOfClubs {
-	background: url(../images/deck_smaller.png) 503px 0px;
-}
-.eightOfHearts {
-	background: url(../images/deck_smaller.png) 503px 365px;
-}
-.nineOfSpades {
-	background: url(../images/deck_smaller.png) 420px 243px;
-}
-.nineOfDiamonds {
-	background: url(../images/deck_smaller.png) 420px 486px;
-}
-.nineOfClubs {
-	background: url(../images/deck_smaller.png) 420px 0px;
-}
-.nineOfHearts {
-	background: url(../images/deck_smaller.png) 420px 365px;
-}
-.tenOfSpades {
-	background: url(../images/deck_smaller.png) 335px 243px;
-}
-.tenOfDiamonds {
-	background: url(../images/deck_smaller.png) 335px 486px;
-}
-.tenOfClubs {
-	background: url(../images/deck_smaller.png) 335px 0px;
-}
-.tenOfHearts {
-	background: url(../images/deck_smaller.png) 335px 365px;
-}
-.jackOfSpades {
-	background: url(../images/deck_smaller.png) 252px 243px;
-}
-.jackOfDiamonds {
-	background: url(../images/deck_smaller.png) 252px 486px;
-}
-.jackOfClubs {
-	background: url(../images/deck_smaller.png) 252px 0px;
-}
-.jackOfHearts {
-	background: url(../images/deck_smaller.png) 252px 365px;
-}
-.queenOfSpades {
-	background: url(../images/deck_smaller.png) 168px 243px;
-}
-.queenOfDiamonds {
-	background: url(../images/deck_smaller.png) 168px 486px;
-}
-.queenOfClubs {
-	background: url(../images/deck_smaller.png) 168px 0px;
-}
-.queenOfHearts {
-	background: url(../images/deck_smaller.png) 168px 365px;
-}
-.kingOfSpades {
-	background: url(../images/deck_smaller.png) 84px 243px;
-}
-.kingOfDiamonds {
-	background: url(../images/deck_smaller.png) 84px 486px;
-}
-.kingOfClubs {
-	background: url(../images/deck_smaller.png) 84px 0px;
-}
-.kingOfHearts {
-	background: url(../images/deck_smaller.png) 84px 365px;
-}
-
-.face-down {
-	background: url(../images/deck_smaller.png) -168px 120px;
-}
-
-/* below are styles for the original spritesheet, which used elements 2x
-the size I eventually used.
-
-.card {
-	width: 167px;
-	height: 244px;
-	margin: 0;
-	display: inline-block;
-}
-
-.aceOfSpades {
-	background: url(../images/deck.png) 0px 486px;
-}
-.aceOfDiamonds {
-	background: url(../images/deck.png) 0px 972px;
-}
-.aceOfClubs {
-	background: url(../images/deck.png) 0px 0px;
-}
-.aceOfHearts {
-	background: url(../images/deck.png) 0px 729px;
-}
-.twoOfSpades {
-	background: url(../images/deck.png) 2012px 486px;
-}		
-.twoOfDiamonds {
-	background: url(../images/deck.png) 2012px 972px;
-}
-.twoOfClubs  {
-	background: url(../images/deck.png) 2012px 0px;
-}
-.twoOfHearts {
-	background: url(../images/deck.png) 2012px 729px;
-}
-.threeOfSpades {
-	background: url(../images/deck.png) 1844px 486px;
-}
-.threeOfDiamonds {
-	background: url(../images/deck.png) 1844px 972px;
-}
-.threeOfClubs {
-	background: url(../images/deck.png) 1844px 0px;
-}
-.threeOfHearts {
-	background: url(../images/deck.png) 1844px 729px;
-}
-
-.fourOfSpades {
-	background: url(../images/deck.png) 1676px 486px;
-}
-.fourOfDiamonds {
-	background: url(../images/deck.png) 1676px 972px;
-}
-.fourOfClubs {
-	background: url(../images/deck.png) 1676px 0px;
-}
-.fourOfHearts {
-	background: url(../images/deck.png) 1676px 729px;
-}
-.fiveOfSpades {
-	background: url(../images/deck.png) 1509px 486px;
-}
-.fiveOfDiamonds {
-	background: url(../images/deck.png) 1509px 972px;
-}
-.fiveOfClubs {
-	background: url(../images/deck.png) 1509px 0px;
-}
-.fiveOfHearts {
-	background: url(../images/deck.png) 1509px 729px;
-}
-.sixOfSpades {
-	background: url(../images/deck.png) 1341px 486px;
-}
-.sixOfDiamonds {
-	background: url(../images/deck.png) 1341px 972px;
-}
-.sixOfClubs {
-	background: url(../images/deck.png) 1341px 0px;
-}
-.sixOfHearts {
-	background: url(../images/deck.png) 1341px 729px;
-}
-.sevenOfSpades {
-	background: url(../images/deck.png) 1174px 486px;
-}
-.sevenOfDiamonds {
-	background: url(../images/deck.png) 1174px 972px;
-}
-.sevenOfClubs {
-	background: url(../images/deck.png) 1174px 0px;
-}
-.sevenOfHearts {
-	background: url(../images/deck.png) 1174px 729px;
-}
-.eightOfSpades {
-	background: url(../images/deck.png) 1006px 486px;
-}
-.eightOfDiamonds {
-	background: url(../images/deck.png) 1006px 972px;
-}
-.eightOfClubs {
-	background: url(../images/deck.png) 1006px 0px;
-}
-.eightOfHearts {
-	background: url(../images/deck.png) 1006px 729px;
-}
-.nineOfSpades {
-	background: url(../images/deck.png) 839px 486px;
-}
-.nineOfDiamonds {
-	background: url(../images/deck.png) 839px 972px;
-}
-.nineOfClubs {
-	background: url(../images/deck.png) 839px 0px;
-}
-.nineOfHearts {
-	background: url(../images/deck.png) 839px 729px;
-}
-.tenOfSpades {
-	background: url(../images/deck.png) 671px 486px;
-}
-.tenOfDiamonds {
-	background: url(../images/deck.png) 671px 972px;
-}
-.tenOfClubs {
-	background: url(../images/deck.png) 671px 0px;
-}
-.tenOfHearts {
-	background: url(../images/deck.png) 671px 729px;
-}
-.jackOfSpades {
-	background: url(../images/deck.png) 503px 486px;
-}
-.jackOfDiamonds {
-	background: url(../images/deck.png) 503px 972px;
-}
-.jackOfClubs {
-	background: url(../images/deck.png) 503px 0px;
-}
-.jackOfHearts {
-	background: url(../images/deck.png) 503px 729px;
-}
-.queenOfSpades {
-	background: url(../images/deck.png) 336px 486px;
-}
-.queenOfDiamonds {
-	background: url(../images/deck.png) 336px 972px;
-}
-.queenOfClubs {
-	background: url(../images/deck.png) 336px 0px;
-}
-.queenOfHearts {
-	background: url(../images/deck.png) 336px 729px;
-}
-.kingOfSpades {
-	background: url(../images/deck.png) 169px 486px;
-}
-.kingOfDiamonds {
-	background: url(../images/deck.png) 169px 972px;
-}
-.kingOfClubs {
-	background: url(../images/deck.png) 169px 0px;
-}
-.kingOfHearts {
-	background: url(../images/deck.png) 169px 729px;
-}
-
-.face-down {
-	background-image: url(../images/bluecard.png);
-}*/

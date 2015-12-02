@@ -1,46 +1,131 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Blackjack</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body>
-	<div class='container'>
-		<div class='info'></div>
-		<!-- <div class='discard-pile'></div>
-		<div class='deck'></div> -->
-		<br>
-		<div class='dealer-hand'>
+  <head>
+    <meta charset="utf-8">
 
-		</div>
-		<br>
-		<div class='pot'><span id='currentBet'>$5</span></div>
-		<br>
-		<div class='player-hand'></div>
-		<div class='button-div'>
-			<div class='new_round button'>new round</div>
-			<div class='hit button'>hit</div>
-			<div class='stand button'>stand</div>
-			<div class='double button'>double</div>
-			<!-- <div class='split button'>split</div> -->
-			<div class='surrender button'>surrender</div>
-		</div>
-		<div class='left-buttons'>
-			<div class='player-balance button'>player balance: <span id='balance'>$500</span></div>
-			<div class='increase-bet button'>increase bet</div>
-			<div class='decrease-bet button'>decrease bet</div>
-		</div>
-	</div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src ="js/jquery.min.js"></script>
-<script type="text/javascript" src ="js/bootstrap.min.js"></script> -->
-<script type="text/javascript" src ="js/decks.js"></script>
-<script type="text/javascript" src ="js/game.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+    <link rel="stylesheet" href="css/styles.css" media="screen" charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <title>John Shea</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li data-menuanchor="welcome" class="active"><a href="#welcome">Welcome</a></li>
+      <li data-menuanchor="about"><a href="#about">About</a></li>
+      <li data-menuanchor="final_project"><a href="#final_project">Final Project</a></li>
+      <li data-menuanchor="wiki"><a href="#wiki">Fünke Wiki</a></li>
+      <li data-menuanchor="byg_a"><a href="#byg_a">BYG Advantage</a></li>
+      <li data-menuanchor="black_swan"><a href="#black_swan">Black Swan</a></li>
+      <li data-menuanchor="blackjack"><a href="#blackjack">Blackjack</a></li>
+      <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div id="pagepiling">
+      <div class="section" id="welcome">
+        <!-- Animate this image somehow? Maybe make it spin into view when loading? Or fade in? -->
+        <img src="../img/Logo.svg" height="320" width="320" alt="logo" />
+        <h1>John Shea</h1>
+        <p>Web Developer</p>
+        <a href="#contact" class="work_button">Let's Work Together!</a>
+        <br />
+        <img class= "down_arrow" src="../img/down_arrow.svg" alt="scroll down" height="40px" />
+      </div>
+
+      <div class="section" id="about">
+        <div class="intro">
+          <h1>About this Developer</h1>
+          <p>John Shea is a full-stack web developer, entrepreneur, and investor with a background in law and finance.</p><br/>
+          <p>In 2012, John founded Proxy Mosaic, a SAAS company that analyzes the link between corporate governance and investment returns.</p><br/>
+          <p>Prior to founding Proxy Mosaic, John practiced data privacy and security law at DeVore and DeMarco LLP.</p><br/>
+          <p>John is a bit impatient. He earned his J.D. at age 21, and his B.A. at age 17.</p>
+          <img class= "down_arrow" src="../img/down_arrow.svg" alt="scroll down" height="40px" />
+        </div>
+      </div>
+
+      <div class="section" id="final_project">
+        <div class="intro">
+          <h1>GA Final Project</h1>
+          <p>Stuff about my final project</p>
+          <br/>
+          <div id="final_project_demo">
+            <a href="https://funke-wiki.herokuapp.com/">
+              <img src="../img/wiki.png" alt="Wiki Project" width="70%" height="70%" />
+            </a>
+          </div>
+          <img class= "down_arrow" src="../img/down_arrow.svg" alt="scroll down" height="40px" />
+        </div>
+      </div>
+
+      <div class="section" id="wiki">
+        <div class="intro">
+          <h1>Fünke Wiki</h1>
+          <p>Stuff about my wiki</p>
+          <br/>
+          <div id="wiki_demo">
+            <a href="https://funke-wiki.herokuapp.com/">
+              <img src="../img/wiki.png" alt="Wiki Project" width="70%" height="70%" />
+            </a>
+          </div>
+          <img class= "down_arrow" src="../img/down_arrow.svg" alt="scroll down" height="40px" />
+        </div>
+      </div>
+
+      <div class="section" id="byg_a">
+        <div class="intro">
+          <h1>GA Final Project</h1>
+          <p>Stuff about my final project</p>
+          <br/>
+          <div id="byg_a_demo">
+            <a href="http://www.bygadvantage.com/">
+              <img src="../img/byg_A.png" alt="BYG Advantage Website" width="70%" height="70%" />
+            </a>
+          </div>
+          <img class= "down_arrow" src="../img/down_arrow.svg" alt="scroll down" height="40px" />
+        </div>
+      </div>
+
+      <div class="section" id="black_swan">
+        <div class="intro">
+          <h1>GA Final Project</h1>
+          <p>Stuff about my final project</p>
+          <br/>
+          <div id="byg_a_demo">
+            <a href="http://www.bygadvantage.com/">
+              <img src="../img/byg_A.png" alt="BYG Advantage Website" width="70%" height="70%" />
+            </a>
+          </div>
+          <img class= "down_arrow" src="../img/down_arrow.svg" alt="scroll down" height="40px" />
+        </div>
+      </div>
+
+      <div class="section" id="blackjack">
+        <div class="intro">
+          <h1>Blackjack</h1>
+          <p>A Fun Game to Play</p>
+          <br/>
+          <div id="blackjack_demo">
+            <a href="http://johndshea.github.io/">
+              <img src="../img/blackjack.png" alt="Blackjack Game" width="70%" height="70%" />
+            </a>
+          </div>
+          <img class= "down_arrow" src="../img/down_arrow.svg" alt="scroll down" height="40px" />
+        </div>
+      </div>
+
+      <div class="section" id="contact">
+        <div class="intro">
+          <h1>Contact Me</h1>
+          <a href="mailto:john@johnshea.nyc"><p>john [at] johnshea.nyc</p></a>
+          <a href="https://www.linkedin.com/in/jdshea"><p>linkedin: jdshea</p></a>
+          <a href="https://github.com/johndshea/"><p>github: johndshea</p></a>
+        </div>
+      </div>
+    </div>
+
+  </body>
 </html>
