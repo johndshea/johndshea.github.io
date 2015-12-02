@@ -1,14 +1,37 @@
 $(document).ready(function() {
 	$('#pagepiling').pagepiling({
 		menu: '#menu',
-		anchors: ['welcome', 'about', 'final_project', 'wiki', 'byg_a',
-						 'black_swan', 'blackjack', 'contact'],
-    sectionsColor: ['white', '#ee005a', '#2C3E50', '#39C'],
+		// Full nav menu buttons
+		anchors: ['welcome',
+							'about',
+							'flaregun',
+							'wiki',
+							'byg_a',
+						  'black_swan',
+							'blackjack',
+							'contact'],
+		// background colors for each section, in order
+    sectionsColor: ['white',
+										'white',
+										'white',
+										'white',
+										'white',
+										'white',
+										'white',
+										'white'],
+		// navigation tooltip names
     navigation: {
     	'position': 'right',
-   		'tooltips': ['Welcome', 'About Me', 'GA Final Project', 'Fünke Wiki',
-									'BYG Advantage', 'Black Swan', 'Blackjack', 'Contact']
+   		'tooltips': ['Welcome',
+									 'About Me',
+									 'FlareGun',
+									 'Fünke Wiki',
+									 'BYG Advantage',
+									 'Black Swan',
+									 'Blackjack',
+									 'Contact']
    	},
+		// apply custom CSS to tooltips after page load
     afterRender: function(){
     	$('#pp-nav').addClass('custom');
     },
