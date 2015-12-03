@@ -1,91 +1,24 @@
 @CHARSET "ISO-8859-1";
 /* Reset CSS
  * --------------------------------------- */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
-form,fieldset,input,textarea,p,blockquote,th,td {
-    padding: 0;
-    margin: 0;
-}
 a{
 	 text-decoration:none;
+   color: white;
 }
-table {
-    border-spacing: 0;
-}
-fieldset,img {
-    border: 0;
-}
+
 address,caption,cite,code,dfn,em,strong,th,var {
     font-weight: normal;
     font-style: normal;
 }
-strong{
-	font-weight: bold;
-}
+
 ol,ul {
     list-style: none;
     margin:0;
     padding:0;
 }
-caption,th {
-    text-align: left;
-}
+
 h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
-    margin:0;
-    padding:0;
-}
-q:before,q:after {
-    content:'';
-}
-abbr,acronym {
-    border: 0;
-}
-
-/* Menu
-* --------------------------------------- */
-
-#menu li {
-	display:inline-block;
-	margin: 10px;
-	color: #000;
-	background:#fff;
-	background: rgba(255,255,255, 0.5);
-	-webkit-border-radius: 10px;
-            border-radius: 10px;
-}
-#menu li.active{
-	background:#666;
-	background: rgba(0,0,0, 0.5);
-	color: #fff;
-}
-#menu li a{
-	text-decoration:none;
-	color: rgba(0,0,0,0.3);
-}
-#menu li.active a:hover{
-	color: #000;
-}
-#menu li:hover{
-	background: rgba(255,255,255, 0.8);
-}
-#menu li a,
-#menu li.active a{
-	padding: 9px 18px;
-	display:block;
-}
-#menu li.active a{
-	color: #fff;
-}
-#menu{
-	position:fixed;
-	top:0;
-	left:0;
-	height: 40px;
-	z-index: 70;
-	width: 100%;
-	padding: 0;
-	margin:0;
 }
 
  /* Site-wide Styling
@@ -98,7 +31,7 @@ body{
 
 h1{
 	font-size: 3em;
-  color:black;
+  color:white;
 }
 
 .section{
@@ -109,14 +42,14 @@ h1{
 }
 
 .work_button {
-  border: 1px solid black;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 3px;
   text-decoration: none;
   color: white;
-  background-color: steelblue;
+  background-color: rgba(0,0,0,0.3);
   position:relative;
   top: 20px;
+  box-shadow: 4px 4px 2px #888888;
 }
 
 .down_arrow {
@@ -124,6 +57,7 @@ h1{
   position: fixed;
   bottom: 3%;
   animation: bounce 2.5s infinite;
+  opacity: 0.7;
 }
 
 @keyframes bounce {
@@ -144,6 +78,10 @@ h1{
  margin: 0 auto;
  font-size: 1em;
  text-align: justify;
+}
+
+.intro h1 {
+color: rgba(0,0,0,0.7);
 }
 
 /* Project information overlay
@@ -171,15 +109,15 @@ h1{
 }
 
 .overlay h1 {
-  font-size: 5em;
+  font-size: 3em;
   text-align: left;
   position: relative;
   top: 40%;
   -ms-transform: translateY(-40%);
   -webkit-transform: translateY(-40%);
   transform: translateY(-40%);
-  padding: 2rem;
-  color: black;
+  color: white;
+  padding-left: 2rem;
 }
 
 /* Welcome Page Styling
@@ -191,11 +129,16 @@ h1{
 
 #welcome h1{
   color: #444;
+  font-size: 3.05em;
+  margin-bottom: 0;
 }
 #welcome p{
   color: #333;
   color: rgba(0,0,0,0.3);
+  font-size: 1.6em;
+  margin-top: 0;
 }
+
 #welcome img{
   margin: 20px 0;
   opacity: 0.7;
@@ -208,7 +151,13 @@ h1{
   background-image: none;
 }
 
-/* Overwriting fullPage.js tooltip color
+/* Contact Page Styling
+* --------------------------------------- */
+#contact h1 {
+  color: white;
+}
+
+/* Overwriting tooltip color
 * --------------------------------------- */
 #pp-nav.custom .pp-tooltip{
   color: #AAA;

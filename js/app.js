@@ -9,7 +9,7 @@ $(document).ready(function() {
 							'wiki',
 							'byg_a',
 						  'blackjack',
-							'other',
+							// 'other',
 							'contact'],
 		// navigation tooltip names
     navigation: {
@@ -20,7 +20,7 @@ $(document).ready(function() {
 									 'Fünke Wiki',
 									 'BYG Advantage',
 									 'Blackjack',
-									 'Other Projects',
+									//  'Other Projects',
 									 'Contact']
    	},
 		// apply custom CSS to tooltips after page load
