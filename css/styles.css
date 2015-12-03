@@ -93,26 +93,61 @@ abbr,acronym {
 
 body{
 	font-family: Arial, sans-serif;
-  color: white;
+  color: rgba(0,0,0,0.7);
 }
 
 h1{
-	font-size: 6em;
-  color:red;
-}
-
-p{
-	font-size: 1em;
-  color: rgba(0,0,0,0.7);
+	font-size: 3em;
+  color:black;
 }
 
 .section{
 	text-align: center;
-  /*background-image: url(../img/blackboard.jpg);*/
   background: url(../img/blackboard.jpg);
-  background-size: auto 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+
+.work_button {
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: steelblue;
+  position:relative;
+  top: 20px;
+}
+
+.down_arrow {
+  display: inline-block;
+  position: fixed;
+  bottom: 3%;
+  animation: bounce 2.5s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px) translateX(-20px);
+
+  }
+  50% {
+    transform: translateY(5px) translateX(-20px);
+  }
+  100% {
+    transform: translateY(0px) translateX(-20px);
+  }
+}
+
+.intro p{
+ width: 50%;
+ margin: 0 auto;
+ font-size: 1em;
+ text-align: justify;
+}
+
+/* Project information overlay
+* --------------------------------------- */
 
 .overlay {
   position: absolute;
@@ -145,29 +180,6 @@ p{
   transform: translateY(-40%);
   padding: 2rem;
   color: black;
-}
-
-.work_button {
-  border: 1px solid black;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  color: white;
-  background-color: steelblue;
-  position:relative;
-  top: 20px;
-}
-
-.down_arrow {
-  display: inline-block;
-  position: fixed;
-  top: 85%;
-}
-
-.intro p{
- width: 50%;
- margin: 0 auto;
- font-size: 1em;
 }
 
 /* Welcome Page Styling

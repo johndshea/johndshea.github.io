@@ -8,8 +8,8 @@ $(document).ready(function() {
 							'flaregun',
 							'wiki',
 							'byg_a',
-						  'black_swan',
-							'blackjack',
+						  'blackjack',
+							'other',
 							'contact'],
 		// navigation tooltip names
     navigation: {
@@ -19,8 +19,8 @@ $(document).ready(function() {
 									 'FlareGun',
 									 'Fünke Wiki',
 									 'BYG Advantage',
-									 'Black Swan',
 									 'Blackjack',
+									 'Other Projects',
 									 'Contact']
    	},
 		// apply custom CSS to tooltips after page load
