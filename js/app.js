@@ -53,3 +53,61 @@ $('.centered').center();
 $( function() {
   $( "main" ).height($( window ).height() - $( "#menubar" ).height());
 } );
+
+// // get machine battery status
+// (function () {
+//
+//             //#region Constants
+//             var NOT_APPLICABLE = "N/A";
+//             //#endregion
+//
+//             //#region Helper Methods
+//             function setBatteryLevel(level, callback) {
+//                 document.getElementById("level").innerHTML = "Battery Level: " + level;
+//
+//                 if (callback &amp;&amp; typeof (callback) === "function") {
+//                     callback();
+//                 }
+//             };
+//
+//             function setChargingStatus(status, callback) {
+//                 document.getElementById("charging").innerHTML = "Charging Status: " + (status === NOT_APPLICABLE ? NOT_APPLICABLE : (status === true ? "Charging" : "Un-plugged"));
+//
+//                 if (callback &amp;&amp; typeof (callback) === "function") {
+//                     callback();
+//                 }
+//             };
+//             //#endregion
+//
+//             try {
+//
+//                 navigator.getBattery().then(function (battery) {
+//                     // When initial promise from navigator.getBattery() is recieved set the current statuses.
+//                     setBatteryLevel(battery.level);
+//                     setChargingStatus(battery.charging);
+//
+//                     battery.onlevelchange = function (evt) { // Event info is available as param
+//                         var _level = battery.level;
+//                         setBatteryLevel(_level, function () {
+//                             console.log("Battery level changed: " + _level, battery);
+//                         });
+//                     };
+//
+//                     battery.onchargingchange = function (evt) { // Event info is available as param
+//                         var _charging = battery.charging;
+//                         setChargingStatus(_charging, function () {
+//                             console.log("Battery charging status changed: " + _charging, battery);
+//                         });
+//                     }
+//                 });
+//             }
+//             catch (e) {
+//                 // Catch the error if navigator.getBattery isn't defined
+//                 document.getElementById("error").innerHTML = "Unable to retrieve battery status. Error Message: " + e;
+//
+//                 // Update
+//                 setBatteryLevel(NOT_APPLICABLE);
+//                 setChargingStatus(NOT_APPLICABLE);
+//
+//             }
+//         })();
