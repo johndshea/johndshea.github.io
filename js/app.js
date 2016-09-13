@@ -16,7 +16,7 @@
 
 (function clock() {
   (function startTime() {
-    var weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+    var weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     var today = new Date(),
         weekday = weekdays[today.getDay()],
