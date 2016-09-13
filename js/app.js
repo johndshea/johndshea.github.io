@@ -14,6 +14,7 @@
   });
 })();
 
+// run the menubar clock
 (function clock() {
   (function startTime() {
     var weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -33,3 +34,8 @@
     }, 1000);
   })()
 })();
+
+// make windows draggable
+$( function() {
+  $( ".window" ).draggable();
+} );

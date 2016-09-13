@@ -5,24 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- app styles -->
+    <link rel="stylesheet" href="css/photon.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- jQuery UI -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/external/jquery/jquery.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.css"> -->
 
-    <!-- 1. Load libraries -->
-     <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <!-- 2. Configure SystemJS -->
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('app').catch(function(err){ console.error(err); });
-    </script>
+    <!-- jQuery UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/external/jquery/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.css">
+
   </head>
 
   <!-- 3. Display the application -->
@@ -74,22 +65,42 @@
       </ul>
     </nav>
 
-    <my-app>Loading...</my-app>
-
-    <!-- Wrap your entire app inside .window -->
+    <!-- Wrap window inside .window -->
     <div class="window">
       <!-- .toolbar-header sits at the top of your app -->
       <header class="toolbar toolbar-header">
-        <h1 class="title">Photon</h1>
+        <div class="toolbar-actions">
+          <div class="btn-group">
+            <button class="btn btn-default">
+              <span class="icon icon-home"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-folder"></span>
+            </button>
+            <button class="btn btn-default active">
+              <span class="icon icon-cloud"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-popup"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-shuffle"></span>
+            </button>
+          </div>
+        </div>
       </header>
 
       <!-- Your app's content goes inside .window-content -->
       <div class="window-content">
         <div class="padded-more">
-          <h1>Welcome to Photon</h1>
+          <h1>About This Developer</h1>
           <p>
-            Thanks for downloading Photon. This is an example HTML page that's linked up to compiled Photon CSS, has the proper meta tags
-            and the HTML structure.
+            John Shea is a full-stack web developer, entrepreneur, and investor with a background in law and finance.
+            He enjoys building rich, full-stack web applications that are a pleasure to use and solve concrete problems.
+            <br/>
+            In 2012, John founded Proxy Mosaic, a SAAS company that analyzes the link between corporate governance and
+            investment returns. Prior to founding Proxy Mosaic, John practiced data privacy and security law at DeVore
+            and DeMarco LLP, and worked as an analyst at Thomson Reuters.
           </p>
         </div>
       </div>
@@ -98,8 +109,6 @@
   </body>
   <script src="js/app.js" charset="utf-8"></script>
 </html>
-
-
 
 <!-- <!DOCTYPE html>
 <html>
