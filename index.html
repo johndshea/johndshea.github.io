@@ -64,48 +64,43 @@
         <li class="menuItem left" id="clock"></li>
       </ul>
     </nav>
-
-    <!-- Wrap window inside .window -->
-    <div class="window">
-      <!-- .toolbar-header sits at the top of your app -->
-      <header class="toolbar toolbar-header">
-        <div class="toolbar-actions">
-          <div class="btn-group">
-            <button class="btn btn-default">
-              <span class="icon icon-home"></span>
-            </button>
-            <button class="btn btn-default">
-              <span class="icon icon-folder"></span>
-            </button>
-            <button class="btn btn-default active">
-              <span class="icon icon-cloud"></span>
-            </button>
-            <button class="btn btn-default">
-              <span class="icon icon-popup"></span>
-            </button>
-            <button class="btn btn-default">
-              <span class="icon icon-shuffle"></span>
-            </button>
+    <main>
+      <div class="window about centered">
+        <div class="traffic-lights">
+          <button class="traffic-light traffic-light-close" id="close"></button>
+          <button class="traffic-light traffic-light-minimize" id="minimize"></button>
+          <button class="traffic-light traffic-light-maximize" id="maximize"></button>
+        </div>
+        <header class="toolbar toolbar-header">
+          <div class="toolbar-actions">
+            <div class="btn-group">
+              <button class="btn btn-default active">
+                <span>Overview</span>
+              </button>
+              <button class="btn btn-default">
+                <span>Portfolio</span>
+              </button>
+              <button class="btn btn-default">
+                <span>Contact</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="window-content">
+          <div class="padded-more">
+            <h1>About This Developer</h1>
+            <p>
+              John Shea is a full-stack web developer, entrepreneur, and investor with a background in law and finance.
+              He enjoys building rich, full-stack web applications that are a pleasure to use and solve concrete problems.
+              <br/>
+              In 2012, John founded Proxy Mosaic, a SAAS company that analyzes the link between corporate governance and
+              investment returns. Prior to founding Proxy Mosaic, John practiced data privacy and security law at DeVore
+              and DeMarco LLP, and worked as an analyst at Thomson Reuters.
+            </p>
           </div>
         </div>
-      </header>
-
-      <!-- Your app's content goes inside .window-content -->
-      <div class="window-content">
-        <div class="padded-more">
-          <h1>About This Developer</h1>
-          <p>
-            John Shea is a full-stack web developer, entrepreneur, and investor with a background in law and finance.
-            He enjoys building rich, full-stack web applications that are a pleasure to use and solve concrete problems.
-            <br/>
-            In 2012, John founded Proxy Mosaic, a SAAS company that analyzes the link between corporate governance and
-            investment returns. Prior to founding Proxy Mosaic, John practiced data privacy and security law at DeVore
-            and DeMarco LLP, and worked as an analyst at Thomson Reuters.
-          </p>
-        </div>
       </div>
-    </div>
-
+    </main>
   </body>
   <script src="js/app.js" charset="utf-8"></script>
 </html>

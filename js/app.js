@@ -35,7 +35,21 @@
   })()
 })();
 
-// make windows draggable
+// make windows draggable within the main section
 $( function() {
-  $( ".window" ).draggable();
+  $( ".window" ).draggable({ containment: "main" });
+} );
+
+// center .centered windows horizontally and vertically
+$.fn.center = function () {
+   this.css("position","absolute");
+   this.css("top", ( $(window).height() - this.height() ) / 2  + "px");
+   this.css("left", ( $(window).width() - this.width() ) / 2 + "px");
+   return this;
+}
+$('.centered').center();
+
+// set main section height to viewport height minus navbar height
+$( function() {
+  $( "main" ).height($( window ).height() - $( "#menubar" ).height());
 } );
