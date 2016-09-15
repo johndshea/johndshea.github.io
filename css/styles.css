@@ -109,6 +109,41 @@ html {
 	top: 0px !important; /* for some reason doesn't get pushed down 1px */
 }
 
+#menubar #battery {
+	width: 24px;
+	height: 14px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+#menubar #battery #battery-bar {
+	height: 100%;
+	background-color: black;
+}
+
+/*#menubar meter,#battery {
+	width: 24px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: 1px solid black;
+	border-radius: 3px;
+	background: none;
+}
+
+#menubar meter,#battery::-webkit-meter-bar {
+  background: none;
+}
+
+#menubar meter,#battery::-webkit-meter-optimum-value {
+  background: black;
+}
+
+#menubar meter,#battery::-moz-meter-bar {
+	background: black;
+}*/
+
 /* application window styles based on Photon http://photonkit.com/ */
 
 .window {
