@@ -61,7 +61,7 @@ html {
 	position: relative;
 	padding-left: 8px;
 	padding-right: 8px;
-	font-family: HelveticaNeue;
+	font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
 	font-size: 14.5px;
 	color: #000000;
 	cursor: default;
@@ -75,7 +75,7 @@ html {
 
 /* the second menubar list item (after the apple logo) should be bold */
 #menubar ul li:nth-of-type(2) {
-	font-family: HelveticaNeue-Bold;
+	font-family: HelveticaNeue-Bold, Helvetica, Arial, sans-serif;;
 	font-weight: bold;
 }
 
