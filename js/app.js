@@ -57,7 +57,7 @@ $( function() {
 // get machine battery status
 (function () {
   function setChargingStatus(status, callback) {
-    document.getElementById("charging").innerHTML = "Charging Status: " + (status === NOT_APPLICABLE ? NOT_APPLICABLE : (status === true ? "Charging" : "Un-plugged"));
+    document.getElementById("charging").innerHTML = "Charging Status: " + (status === true ? "Charging" : "Un-plugged");
     if (callback && typeof (callback) === "function") {
       callback();
     }
@@ -65,9 +65,7 @@ $( function() {
 
   navigator.getBattery().then(function (battery) {
     // When initial promise from navigator.getBattery() is recieved set the current statuses.
-    document.getElementById("battery-bar").width = (battery.level * 100) + "%";
-    // TODO: FIGURE OUT WHY THIS ISN'T WORKING
-    console.log(document.getElementById("battery-bar").width)
+    document.getElementById('battery-bar').setAttribute("style",("width:" + (battery.level * 100) + "%"));
     setChargingStatus(battery.charging);
   });
 })();
