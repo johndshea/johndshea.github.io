@@ -55,6 +55,7 @@ $( function() {
 } );
 
 // get machine battery status
+// TODO: set this to re-run periodically, say every five minutes
 (function () {
   function setChargingStatus(status, callback) {
     document.getElementById("charging").innerHTML = "Charging Status: " + (status === true ? "Charging" : "Un-plugged");

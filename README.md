@@ -4,7 +4,7 @@ Todo:
 * Set up "about" window to display by default and showcase basic resume info in the style of the macOS "about this mac" window
 * use AngularJS 1.0 as a window management system
 * get at least partial faux menus working on the menubar
-* add battery status indicator (default to "plugged in" symbol)
+* add battery status indicator (default to "plugged in" symbol), set to refresh every five minutes, also change icon on plug/unplug
 * Test the site in Firefox and IE, particularly the battery indicator and the fonts
 
 Bugs:
