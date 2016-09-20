@@ -124,26 +124,38 @@ html {
 	background-color: black;
 }
 
-/*#menubar meter,#battery {
-	width: 24px;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	border: 1px solid black;
-	border-radius: 3px;
-	background: none;
+#conductor {
+  width: 2px;
+  height: 5px;
+  border-radius: 0px 14px 14px 0px;
+  background-color: black;
+	position: relative;
+	left: 23px;
+	top: 3px;
 }
 
-#menubar meter,#battery::-webkit-meter-bar {
-  background: none;
+#bolt {
+  width: 0px;
+  height: 0px;
+  border: 2px solid transparent;
+  border-bottom: 7.2px solid rgba(255,255,255,0.9);
+  position: relative;
+  transform: rotateZ(27deg);
+  margin-left: 10px;
+	top: -7px;
+	color: rgba(255,255,255);
+	display: none;
 }
 
-#menubar meter,#battery::-webkit-meter-optimum-value {
-  background: black;
+#bolt-bottom {
+  width: 0px;
+  height: 0px;
+  border: 2px solid transparent;
+  border-top: 7.2px solid rgba(255,255,255,0.9);
+  position: absolute;
+  margin-top: 5px;
+	color: rgba(255,255,255);
 }
-
-#menubar meter,#battery::-moz-meter-bar {
-	background: black;
-}*/
 
 /* application window styles based on Photon http://photonkit.com/ */
 

@@ -55,18 +55,25 @@ $( function() {
 } );
 
 // get machine battery status
-// TODO: set this to re-run periodically, say every five minutes
-(function () {
-  function setChargingStatus(status, callback) {
-    document.getElementById("charging").innerHTML = "Charging Status: " + (status === true ? "Charging" : "Un-plugged");
-    if (callback && typeof (callback) === "function") {
-      callback();
-    }
-  };
-
+(function updateBattery() {
   navigator.getBattery().then(function (battery) {
-    // When initial promise from navigator.getBattery() is recieved set the current statuses.
-    document.getElementById('battery-bar').setAttribute("style",("width:" + (battery.level * 100) + "%"));
-    setChargingStatus(battery.charging);
+    setBatteryStatus(battery);
+
+    battery.addEventListener('chargingchange', function(){
+      setBatteryStatus(battery);
+    });
+
+    battery.addEventListener('levelchange', function(){
+      setBatteryStatus(battery);
+    });
   });
+
+  function setBatteryStatus(battery) {
+    document.getElementById('bolt').setAttribute("style",("display:" + (battery.charging === true ? "block" : "none")));
+    if (battery.charging) {
+      document.getElementById('battery-bar').setAttribute("style","width: 100%");
+    } else {
+      document.getElementById('battery-bar').setAttribute("style",("width:" + (battery.level * 100) + "%"));
+    }
+  }
 })();
